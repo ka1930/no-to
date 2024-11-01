@@ -33,7 +33,8 @@
         </table>
         <section>
             <h2 class="form_ttl">お問い合わせフォーム</h2>
-            <form action="/thanks.html" method="POST" data-netlify="true" class="u-mT4 u-w90 u-mWA">
+            <form method="POST" data-netlify="true" class="u-mT4 u-w90 u-mWA" name="contact" action="/thanks">
+                <input type="hidden" name="form-name" value="contact" />
                 <div>
                     <label for="name" class="u-fosM u-bold u-ls2">お名前<span class="form_clr">※</span></label><br>
                     <div class="u-flxBet">
@@ -146,33 +147,6 @@
                     <textarea id="question" name="question"></textarea>
                 </div>
                 <button type="submit">送信する</button>
-            </form>
-
-
-            <form method="POST" class="p-form" netlify name="contact" action="/thanks">
-                <input type="hidden" name="form-name" value="contact" />
-                <label class="p-form__label" for="name">お名前　<span class="p-form__label--req">必須</span></label>
-                <input class="p-form__input" type="text" id="name" name="name" required placeholder="山田　太郎">
-
-                <label class="p-form__label" for="kanaName">お名前(カナ)　<span
-                        class="p-form__label--req">必須</span></label>
-                <input class="p-form__input" type="text" id="kanaName" name="kanaName" required
-                    placeholder="ヤマダ　タロウ">
-
-                <label class="p-form__label" for="tel">電話番号　<span class="p-form__label--req">必須</span></label>
-                <input class="p-form__input" type="tel" id="tel" name="tel" required placeholder="000-000-0000">
-
-                <label class="p-form__label" for="email">メールアドレス　<span
-                        class="p-form__label--req">必須</span></label>
-                <input class="p-form__input" type="email" id="email" name="email" required
-                    placeholder="taro@taro.email">
-
-                <label class="p-form__label" for="message">お問い合わせ内容　<span
-                        class="p-form__label--req">必須</span></label>
-                <textarea class="p-form__input" id="message" name="message" rows="4" cols="50"
-                    required></textarea>
-
-                <button class="p-form__submit" type="submit">送信する</button>
             </form>
 
 

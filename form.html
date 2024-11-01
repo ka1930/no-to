@@ -128,33 +128,19 @@
                     <textarea id="photospot" name="photospot" placeholder="住所" required></textarea>
                 </div>
 
-                <!-- <div class="u-mT2">
+                <div class="u-mT2">
                     <p class="u-fosM u-bold">撮影希望時期</p>
                     <select id="year" name="year">
-                        <option value="" disabled selected>2025年</option>
-                        <script>
-                            for (let year = 2024; year <= 2100; year++) {
-                                document.write(`<option value="${year}">${year}</option>`);
-                            }
-                        </script>
+                        <option value="" disabled selected>年</option>
                     </select>
                     <select id="month" name="month">
-                        <option value="" disabled selected>12月</option>
-                        <script>
-                            for (let month = 1; month <= 12; month++) {
-                                document.write(`<option value="${month}">${month}</option>`);
-                            }
-                        </script>
+                        <option value="" disabled selected>月</option>
                     </select>
                     <select id="day" name="day">
-                        <option value="" disabled selected>30日</option>
-                        <script>
-                            for (let day = 1; day <= 31; day++) {
-                                document.write(`<option value="${day}">${day}</option>`);
-                            }
-                        </script>
+                        <option value="" disabled selected>日</option>
                     </select>
-                </div> -->
+                </div>
+
                 <div class="u-mT4">
                     <label for="question" class="u-fosL u-bold">お問い合わせ</label>
                     <textarea id="question" name="question"></textarea>
@@ -196,6 +182,38 @@
 
 
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const yearSelect = document.getElementById('year');
+            const monthSelect = document.getElementById('month');
+            const daySelect = document.getElementById('day');
+    
+            // 年の選択肢を追加
+            for (let year = 2024; year <= 2100; year++) {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = `${year}年`;
+                yearSelect.appendChild(option);
+            }
+    
+            // 月の選択肢を追加
+            for (let month = 1; month <= 12; month++) {
+                const option = document.createElement('option');
+                option.value = month;
+                option.textContent = `${month}月`;
+                monthSelect.appendChild(option);
+            }
+    
+            // 日の選択肢を追加
+            for (let day = 1; day <= 31; day++) {
+                const option = document.createElement('option');
+                option.value = day;
+                option.textContent = `${day}日`;
+                daySelect.appendChild(option);
+            }
+        });
+    </script>
 </body>
 
 </html>
